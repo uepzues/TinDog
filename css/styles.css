@@ -1,0 +1,321 @@
+:root {
+  --color-main: #ff4c68;
+  --color-white: #fff;
+  --color-neutral: #8f8f8f;
+  --color-secondary: #ef8172;
+
+  --ff-montserrat: "Montserrat", sans-serif;
+  --ff-ubuntu: "Ubuntu", sans-serif;
+
+  --fw-xbold: 900;
+  --fw-bold: 800;
+  --fw-regular: 400;
+  --fw-midthin: 300;
+  --fw-thin: 100;
+}
+/* Josh Comeau's css reset */
+/* 1. Use a more-intuitive box-sizing model.*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/* 2. Remove default margin*/
+* {
+  margin: 0;
+}
+/*  3. Allow percentage-based heights in the application */
+html,
+body {
+  height: 100%;
+}
+/*  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*  6. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*  7. Remove built-in form typography styles */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*  8. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*  9. Create a root stacking context */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* style start */
+body {
+  font-family: --ff-montserrat;
+  font-weight: var(--fw-regular);
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+main {
+  width: 100vw;
+}
+
+/* title section */
+#title {
+  font-family: var(--ff-ubuntu);
+  background-color: var(--color-main);
+  padding: 2% 15% 0;
+  overflow: hidden;
+}
+
+/* title > navbar */
+.navbar {
+  padding-bottom: 3em;
+}
+
+.navbar-brand {
+  font-family: var(--ff-ubuntu);
+  font-weight: var(--fw-bold);
+  font-size: 2.5rem;
+}
+
+.nav-item {
+  padding: 0 1.125rem;
+}
+
+/* title > heading */
+
+.title-heading {
+  font-family: var(--ff-montserrat);
+  font-weight: var(--fw-xbold);
+  font-size: 3rem;
+  color: var(--color-white);
+  line-height: 1.5;
+}
+
+.download-button {
+  margin: 0.5em 0.5em 0.5em 0;
+}
+
+.heading-image {
+  width: 60%;
+  rotate: 25deg;
+  margin: auto;
+}
+
+@media (max-width: 991px) {
+  .heading-image {
+    position: relative;
+    top: 2.5em;
+    rotate: 0deg;
+    padding-bottom: 6em;
+  }
+  .section-heading,
+  #navbarToggle {
+    text-align: center;
+  }
+}
+
+/* features section */
+
+.feat-container {
+  text-align: center;
+  /* padding: 0; */
+  margin: 7em auto;
+  width: 75%;
+}
+
+.feat-box .card-body {
+  margin: 3em 0;
+  border: none;
+}
+
+.feat-box .card-body > .icon {
+  font-size: 3.75rem;
+  color: var(--color-secondary);
+}
+
+.feat-box > .card-body > .icon:hover {
+  color: var(--color-main);
+}
+
+.feat-box .card-body > h3 {
+  font-family: var(--ff-montserrat);
+  font-weight: var(--fw-xbold);
+  font-size: 2rem;
+}
+
+.feat-box .card-body > p {
+  font-family: var(--ff-montserrat);
+  color: var(--color-neutral);
+}
+
+/* testimonials section */
+
+#testimonials {
+  background-color: var(--color-secondary);
+  padding-top: 7em;
+  padding-bottom: 4em;
+  text-align: center;
+  color: var(--color-white);
+}
+
+.testi-box {
+  margin: auto;
+  width: 70%;
+}
+
+.testimonial-text {
+  font-family: var(--ff-montserrat);
+  font-weight: var(--fw-xbold);
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+.testimonial-image {
+  width: 13%;
+  border-radius: 100%;
+  padding: 2em 0;
+  margin: auto;
+}
+
+.testimonial-image,
+.carousel-item > span {
+  display: inline-block;
+  padding-right: 1em;
+  font-family: var(--ff-montserrat);
+}
+
+/* press section */
+#press {
+  background-color: var(--color-secondary);
+}
+
+.press-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 6em;
+}
+
+.press-container > img {
+  width: 15%;
+  margin: 0 1em;
+}
+
+/* pricing */
+
+#pricing {
+  text-align: center;
+}
+
+.pricing-wrapper {
+  display: flex;
+  margin: auto;
+  width: 85%;
+}
+
+.head-text {
+  font-family: var(--ff-montserrat);
+  font-weight: var(--fw-xbold);
+  font-size: 3rem;
+  padding-top: 2.5em;
+}
+
+.head-desc {
+  font-family: var(--ff-ubuntu);
+  font-weight: var(--fw-midthin);
+  color: var(--color-neutral);
+  padding-bottom: 2em;
+}
+
+.card {
+  border: none;
+  margin-bottom: 2em;
+}
+
+.card-body {
+  border: 2px outset;
+  border-color: #fffcfc;
+  border-radius: 0.25em;
+  padding: 0.25em 0;
+}
+
+.card-header {
+  font-family: var(--ff-montserrat) !important;
+  font-weight: 500 !important;
+  font-size: 1.5rem !important;
+  padding: 0.65em;
+}
+
+.card-title {
+  font-family: var(--ff-montserrat);
+  font-weight: var(--fw-xbold);
+  font-size: 2.5em;
+}
+
+.list-group {
+  margin-top: 20px;
+}
+
+.list-group-item {
+  font-family: var(--ff-ubuntu);
+  font-weight: var(--fw-midthin);
+  font-size: 1rem;
+  line-height: 1;
+  color: var(--color-neutral);
+  padding: 0;
+  border: none;
+}
+
+.btn {
+  font-family: var(--ff-montserrat);
+  border-radius: 0.25em;
+  padding: 0.5em;
+  margin-bottom: 1em;
+}
+
+/* cta section */
+#cta {
+  background-color: var(--color-main);
+}
+
+#cta > h3 {
+  font-family: var(--ff-montserrat);
+  font-weight: var(--fw-xbold);
+  font-size: 1.625rem;
+  color: var(--color-white);
+}
+
+.btn-bot {
+  margin: 1em 0.75em 1em 0.75em;
+}
+
+#footer {
+  font-family: var(--ff-montserrat);
+  font-size: 0.75em;
+}
