@@ -1,2 +1,2 @@
 TinDog Site
-!https://github.com/uepzues/TinDog/blob/main/images/Tindog%20Site.png
+![Tindog Site Screenshot(https://github.com/uepzues/TinDog/blob/main/images/Tindog%20Site.png)
