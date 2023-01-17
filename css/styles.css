@@ -71,14 +71,16 @@ h6 {
 
 /* style start */
 body {
-  font-family: --ff-montserrat;
-  font-weight: var(--fw-regular);
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: center;
 }
-
+h1,
+h2,
+h3 {
+  font-family: var(--ff-montserrat);
+}
 main {
   width: 100vw;
 }
@@ -107,9 +109,7 @@ main {
 }
 
 /* title > heading */
-
 .title-heading {
-  font-family: var(--ff-montserrat);
   font-weight: var(--fw-xbold);
   font-size: 3rem;
   color: var(--color-white);
@@ -126,30 +126,15 @@ main {
   margin: auto;
 }
 
-@media (max-width: 991px) {
-  .heading-image {
-    position: relative;
-    top: 2.5em;
-    rotate: 0deg;
-    padding-bottom: 6em;
-  }
-  .section-heading,
-  #navbarToggle {
-    text-align: center;
-  }
-}
-
 /* features section */
-
 .feat-container {
   text-align: center;
-  /* padding: 0; */
   margin: 7em auto;
   width: 75%;
 }
 
 .feat-box .card-body {
-  margin: 3em 0;
+  margin: 1em 0;
   border: none;
 }
 
@@ -163,7 +148,6 @@ main {
 }
 
 .feat-box .card-body > h3 {
-  font-family: var(--ff-montserrat);
   font-weight: var(--fw-xbold);
   font-size: 2rem;
 }
@@ -174,7 +158,6 @@ main {
 }
 
 /* testimonials section */
-
 #testimonials {
   background-color: var(--color-secondary);
   padding-top: 7em;
@@ -189,7 +172,6 @@ main {
 }
 
 .testimonial-text {
-  font-family: var(--ff-montserrat);
   font-weight: var(--fw-xbold);
   font-size: 3rem;
   line-height: 1.5;
@@ -206,7 +188,6 @@ main {
 .carousel-item > span {
   display: inline-block;
   padding-right: 1em;
-  font-family: var(--ff-montserrat);
 }
 
 /* press section */
@@ -218,7 +199,6 @@ main {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
   padding-bottom: 6em;
 }
 
@@ -228,7 +208,6 @@ main {
 }
 
 /* pricing */
-
 #pricing {
   text-align: center;
 }
@@ -240,7 +219,6 @@ main {
 }
 
 .head-text {
-  font-family: var(--ff-montserrat);
   font-weight: var(--fw-xbold);
   font-size: 3rem;
   padding-top: 2.5em;
@@ -266,14 +244,12 @@ main {
 }
 
 .card-header {
-  font-family: var(--ff-montserrat) !important;
-  font-weight: 500 !important;
-  font-size: 1.5rem !important;
+  font-weight: 500;
+  font-size: 1.5rem;
   padding: 0.65em;
 }
 
 .card-title {
-  font-family: var(--ff-montserrat);
   font-weight: var(--fw-xbold);
   font-size: 2.5em;
 }
@@ -293,7 +269,6 @@ main {
 }
 
 .btn {
-  font-family: var(--ff-montserrat);
   border-radius: 0.25em;
   padding: 0.5em;
   margin-bottom: 1em;
@@ -305,7 +280,6 @@ main {
 }
 
 #cta > h3 {
-  font-family: var(--ff-montserrat);
   font-weight: var(--fw-xbold);
   font-size: 1.625rem;
   color: var(--color-white);
@@ -314,8 +288,37 @@ main {
 .btn-bot {
   margin: 1em 0.75em 1em 0.75em;
 }
-
+/* footer */
 #footer {
-  font-family: var(--ff-montserrat);
   font-size: 0.75em;
+}
+.user{
+  text-decoration: none;
+}
+
+/* media queries */
+@media (max-width: 1000px) {
+  .title-heading {
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+  .testimonial-text {
+    font-weight: var(--fw-bold);
+    font-size: 3rem;
+    line-height: 1.25;
+    font-size: 2rem;
+  }
+  .heading-image {
+    position: relative;
+    top: 2.5em;
+    rotate: 0deg;
+    padding-bottom: 6em;
+  }
+  .section-heading,
+  #navbarToggle {
+    text-align: center;
+  }
+  .head-text {
+    font-size: 2.5rem;
+  }
 }
